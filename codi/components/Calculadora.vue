@@ -22,7 +22,11 @@
             </v-col>
             <v-col cols="6" style="background-image: linear-gradient(to right, #1c87c9, #8ebf42)">
                 <h1 style="color:blue">Resultat:</h1>
-                {{resultat}}
+                <div>{{resultat}}</div>
+                <div>La suma es {{laSuma}}</div>
+                <div>La resta es {{laResta}}</div>
+                <div>La multiplicacio es {{laMultiplicacio}}</div>
+                <div>La dividi es {{laDividi}}</div>
             </v-col>
         </v-row>
     </v-container>
@@ -67,6 +71,26 @@ export default {
                     this.num2=0
                     this.resultat=0
                 }
+            },
+            computed:{
+                laSuma(){
+                    return parseFloat(this.num1)
+                    + parseFloat(this.num2)
+                },
+                laResta(){
+                    return parseFloat(this.num1)
+                    - parseFloat(this.num2)
+                },
+                laMultiplicacio(){
+                    return parseFloat(this.num1)
+                    * parseFloat(this.num2)
+                },
+                laDividi(){
+                    return parseFloat(this.num1)
+                    / parseFloat(this.num2)
+                }
+
+
             }
 }
 </script>
